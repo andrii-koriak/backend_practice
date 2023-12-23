@@ -2,4 +2,4 @@ import firebase_service
 
 fb = firebase_service.FirebaseService()
 
-fb.sign_up()
+fb.delete_user("koriak.andruha@gmail.com")
