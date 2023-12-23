@@ -5,11 +5,11 @@ from firebase_admin import auth
 
 
 class FirebaseService():
-    def init_app():
+    def __init__(self):
         cred = credentials.Certificate("credentials.json")
         firebase_admin.initialize_app(cred)
 
-    def sign_up(): 
+    def sign_up(self): 
         email = input("write your email")
         password = input("write your password")
         auth.create_user(email=email, password=password)
