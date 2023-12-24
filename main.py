@@ -1,5 +1,8 @@
-import firebase_admin
-from firebase_admin import credentials
+import firebase_service
 
-cred = credentials.Certificate("credentials.json")
-firebase_admin.initialize_app(cred)
+fb = firebase_service.FirebaseService()
+
+users = fb.list_users()
+
+for user in users:
+    fb.update_user_email(user.email, 'test@mail.com')
